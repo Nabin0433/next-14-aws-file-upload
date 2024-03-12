@@ -75,24 +75,25 @@ export {
     uploadImgToAWS,
     deleteImgFromAWS,
 };
-
-
+```
 
 # Usage
 
     ## Upload Image
-
+```typescript
         // Example usage for uploading an image
         const res = await uploadImgToAWS(img, 'e3global/blog/');
         console.log(`Image uploaded successfully. Key: ${res.key}`);
         console.log(`Image URL: ${res.url}`);
+```
 
     ## Delete Image
 
+```typescript
         // Example usage for deleting an image
         await deleteImgFromAWS('Your Key');
         console.log(`Image deleted successfully.`);
-
+```
 
 
 # Contributing
