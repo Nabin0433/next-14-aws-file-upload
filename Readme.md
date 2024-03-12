@@ -10,10 +10,12 @@ This utility provides functions for uploading and deleting images to and from an
    npm install @aws-sdk/client-s3
 
 ## Set up your AWS credentials and bucket information in your environment variables:
-    export BUCKET=your-bucket-name
-    export AWS_ACCESS_KEY_ID=your-access-key-id
-    export AWS_SECRET_ACCESS_KEY=your-secret-access-key
 
+```.env
+     BUCKET=your-bucket-name
+     AWS_ACCESS_KEY_ID=your-access-key-id
+     AWS_SECRET_ACCESS_KEY=your-secret-access-key
+```
 
 # AWS S3 Image Upload and Delete Utility
 
@@ -38,7 +40,7 @@ const Bucket = process.env.BUCKET;
 const s3 = new S3Client({
     region: 'us-east-2',
     credentials: {
-        accessKeyId: process.env.AWS_ACCES_KEY_ID as string,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
     },
 });
@@ -80,7 +82,8 @@ export {
 # Usage
 
 ## Upload Image
-    
+
+### Example: Upload Image
 ```typescript
         // Example usage for uploading an image
         const res = await uploadImgToAWS(img, 'e3global/blog/');
@@ -90,8 +93,8 @@ export {
 
 ## Delete Image
 
+### Example: Delete Image 
 ```typescript
-        // Example usage for deleting an image
         await deleteImgFromAWS('Your Key');
         console.log(`Image deleted successfully.`);
 ```
