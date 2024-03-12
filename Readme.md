@@ -79,7 +79,8 @@ export {
 
 # Usage
 
-    ## Upload Image
+## Upload Image
+    
 ```typescript
         // Example usage for uploading an image
         const res = await uploadImgToAWS(img, 'e3global/blog/');
@@ -87,7 +88,7 @@ export {
         console.log(`Image URL: ${res.url}`);
 ```
 
-    ## Delete Image
+## Delete Image
 
 ```typescript
         // Example usage for deleting an image
